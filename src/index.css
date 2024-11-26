@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper-pagination-bullet {
+  @apply bg-orange/50 w-2 h-2 opacity-100;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-orange;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply after:content-[''] w-10 h-10 flex items-center justify-center;
+}
+
+.swiper-button-disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.swiper-pagination {
+  @apply relative mt-8 flex justify-center gap-2;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
